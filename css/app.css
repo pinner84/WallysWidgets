@@ -1,0 +1,33 @@
+h1 .fas, h2 .fas, h3 .fas, h4 .fas {
+    font-size: 0.7em;
+    color: #4a88a8;
+}
+samp,pre{
+    padding: 3px;
+    border:1px solid #e1e1e1;
+    background: #eee;
+    
+}
+.button{
+    border-radius: 8px;
+        box-shadow:0px 2px 3px rgba(0,0,0,0.4);
+    background: #4a88a8;
+}
+table{
+    width: 100%;
+}
+thead tr{
+    background: #4a88a8;
+}
+thead tr th{
+    padding: 6px; font-size: 1.2rem;
+    font-weight: 300;
+    color: #fff;
+}
+tbody tr td { border-bottom: 1px solid #ddd; padding: 4px 8px;}
+tbody tr:nth-child(odd){
+    background: #eee;
+}
+tbody tr.alert{
+    background:#d00; color: #fff;
+}
