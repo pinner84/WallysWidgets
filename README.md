@@ -1,2 +1,2 @@
-# WallysWidgets
-Example coding task for Stickee
+# Wally's Widgets
+Example coding task for Stickee.
