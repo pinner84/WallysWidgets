@@ -54,13 +54,6 @@ class Widget{
            
         }  
 
-        // Quantity is between the min and 2nd pack size
-    /*    if($count > min($this->packs) && $count < $this->packs[1]){   
-             $this->shipment[$this->packs[1]]++;
-             return $this->displayResult($this->shipment);
-             
-        }  */
-
         // Quantity > than pack size 2. 
 
         rsort($this->packs); // Reverse the array to start from largest to smallest
