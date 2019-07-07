@@ -26,9 +26,16 @@ class Widget{
     
     private function displayResult($result){
         $out ="";
-       foreach($result as $pack=>$qty){
-           $out .= $qty . "x " . number_format($pack) . "<br>"; // Pretty display for the array.
-       }
+        foreach($result as $pack=>$qty){
+            if($qty>1){     // Check to see if multiple packs are equal to 1 larger pack. 
+                $total = $pack*$qty; 
+                if(in_array($total,$this->packs)){ //is the total in the packs array
+                    $qty =1; 
+                    $pack = $total;
+                }   
+            }
+            $out .= $qty . "x " . number_format($pack) . "<br>"; // Pretty display for the array.
+        }
         echo $out;
     }
     
@@ -48,11 +55,11 @@ class Widget{
         }  
 
         // Quantity is between the min and 2nd pack size
-        if($count > min($this->packs) && $count < $this->packs[1]){   
+    /*    if($count > min($this->packs) && $count < $this->packs[1]){   
              $this->shipment[$this->packs[1]]++;
              return $this->displayResult($this->shipment);
              
-        }  
+        }  */
 
         // Quantity > than pack size 2. 
 
